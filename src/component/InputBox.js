@@ -8,6 +8,7 @@ const InputBox = () => {
     const username = ""
     const age = 12
     let mood = ""
+    let kidOne = 14
     
   return (
     <div>
@@ -27,6 +28,10 @@ const InputBox = () => {
         (mood === "angry")? <p>She is angry.<img src= {angry} width={50} height={50} alt="happy kid"/></p>  :
         <p>I do not know her mood<img src= {soso} width={50} height={50} alt="happy kid"/></p>
         }</p>
+
+       
+    {/* api data end point */}
+      
 
     </div>
   )
