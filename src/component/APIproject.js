@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const APIproject = () => {
-    const [data,setData]= useState([])//alll data in api put on data
-    const [loading,setLoading]= useState(false)
+    const [data,setData]= useState()
     //usefeect use 
     useEffect(
         ()=>{
@@ -23,13 +22,23 @@ const APIproject = () => {
     //       .then(res => res.json())
     //       .then(data => setData(data))
     //   })
-    //   console.log(data)// just for check data coming
-
-
-
+      console.log(data)// just for check data coming
 
   return (
     <div>
+
+  {data ? (
+    <div>
+   <h3>id is {data.objectID}</h3>
+   <h3>id is {data.country}</h3>
+   <h3>id is {data.culture}</h3>
+   <h3>id is {data.objectDate}</h3>
+   <img src={data.primaryImageSmall}/>
+    </div>
+  )
+  : (
+    <h2>loading</h2>
+  )}
 
     </div>
   )
